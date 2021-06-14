@@ -1,0 +1,95 @@
+.section {
+  padding-bottom: var(--space-xxxl);
+
+  &--title {
+    font-family: var(--font-main);
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--color-secondary);
+    padding-bottom: var(--space-s);
+  }
+  
+  &--text {
+    font-family:'Circular Std Book';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 140%;
+    color: var(--color-secondary);
+  }
+  
+  &--stats-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding-top: var(--space-m);
+
+
+    &--item {
+
+      &--name{
+        font-family: 'Circular Std Book';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 140%;
+        color: var(--color-secondary);
+      }
+
+      &--value{
+        font-family: var(--font-main);
+        font-style: normal;
+        font-weight: 900;
+        font-size: 28px;
+        line-height: 140%;
+        color: var(--color-main);
+        padding-bottom: var(--space-xxs);
+      }
+    }
+  }
+
+  &--img {
+    width: 100%;
+  }
+
+  &--citation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Circular Std Book';
+    font-style: italic;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 140%;
+    color: #000000;
+    padding-bottom: var(--space-m);
+    padding-top: var(--space-m);
+
+    &--text {
+      padding: 0 0.5vw 0 0.5vw;
+    }
+  }
+
+  &--links{
+    &--link{
+      display: flex;
+      align-items: center;
+      &--a{
+        font-family: var(--font-main);
+        font-style: normal;
+        font-weight: normal;
+        font-size: 21px;
+        line-height: 140%;
+        color: var(--color-main);
+        text-decoration: none;
+      }
+
+      &--icon{
+        padding-right: var(--space-xs);
+      }
+    }
+  }
+
+}

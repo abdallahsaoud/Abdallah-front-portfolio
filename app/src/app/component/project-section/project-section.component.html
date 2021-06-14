@@ -1,0 +1,8 @@
+<section class='projects' *ngIf='projects' [ngStyle.lt-lg]="{ 'margin-bottom': '2vh'}" [ngStyle.gt-md]="{ 'padding-right': '2vw'}">
+  <h3 class='projects--title' fxHide.gt-md="true">Mes projets</h3>
+  <ul class='projects--list'  gdColumns.lt-lg="1fr 1fr" gdGap.lt-lg="21px" [ngClass.gt-md]="'projects--list-desktop'" >
+    <li *ngFor='let project of projects; let i = index' class='projects--list--item' [ngClass.gt-md]="'projects--list--item-desktop'">
+      <app-project-card  (onCardSelect)='changeProject($event)' [activeProject]='activeIndex' [project]="project" [index]='i + 1' [projectNumbers]='projectNumbers'></app-project-card>
+    </li>
+  </ul>
+</section>

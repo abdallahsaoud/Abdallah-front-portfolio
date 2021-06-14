@@ -1,0 +1,14 @@
+
+ .gallery {
+    // display: grid;
+    // grid-template-columns: 1fr 1fr;
+    // gap: 11px;
+
+    &--item{
+      &--img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+ 
+  }

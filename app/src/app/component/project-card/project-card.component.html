@@ -1,0 +1,11 @@
+<div class='card-wrapper'>
+  <div class='card' [ngStyle.gt-md]="{'padding': '44px'}" [ngStyle.lt-lg]="{'width': '100%'}" (click)="cardClick('project')">
+    <div class='card--number' [style.backgroundImage]="'url('+ project.cardImage.url +')'">0{{index}}</div>
+    <div class='card--title'>{{project.title}}</div>
+    <div class='card--date'>{{project.projectCreation | date:'MMM d'}}</div>
+  </div>
+  <span class='button' (click)='cardClick("home")' [ngClass.gt-md]="{'button--display': index === 1 && activeProject === 1 || index !== 0 && activeProject  === index}"  [fxHide.lt-lg]="true">Revenir à l'accueil</span>
+  <span class='button' (click)='cardClick("project")' [ngClass.gt-md]="{'button--display': index === activeProject + 1}"  [fxHide.lt-lg]="true">Project suivant</span>
+</div>
+
+

@@ -1,0 +1,5 @@
+<ul class='gallery' gdColumns="1fr 1fr" gdGap="11px">
+  <li class='gallery--item' *ngFor='let image of images; let i = index'>
+    <img class='gallery--item--img' [lightbox]="i" [gallery]="index" [src]="image.url">
+  </li>
+</ul>

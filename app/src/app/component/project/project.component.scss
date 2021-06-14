@@ -1,0 +1,38 @@
+.project {
+  padding: 40px 20px 20px 20px;
+  &--title {
+    font-family: var(--font-main);
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 40px;
+    color: var(--color-main);
+  }
+  &--subtitle {
+    font-family: var(--font-main);
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--color-secondary);
+    padding-bottom: var(--space-xl);
+  }
+}
+
+.project-button {
+  font-family: var(--font-main);
+  font-style: normal;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--color-main);
+  background: #ffffff;
+  padding: 12px;
+  /* Shadow/spread */
+  box-shadow: 0px 10px 30px rgba(193, 175, 245, 0.2);
+  border-radius: 16px 16px 0px 16px;
+  position: fixed;
+  bottom: 26px;
+  right: 20px;
+  border:none;
+}

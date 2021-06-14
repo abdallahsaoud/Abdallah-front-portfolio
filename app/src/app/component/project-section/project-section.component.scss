@@ -1,0 +1,41 @@
+.projects {
+
+  &--title {
+    font-family: var(--font-main);
+    font-style: normal;
+    font-weight: 900;
+    font-size: 19px;
+    line-height: 24px;
+    color: var(--color-secondary);
+    padding-bottom: var(--space-m);
+  }
+
+  &--list{
+    // &--item {
+    //   transform: translateX(calc(100% + 20px) );
+
+    // }
+
+    &--item-desktop{
+      display: flex;
+      align-items: center;
+    }
+  }
+  &--list-desktop {
+    display: flex;
+    gap: 1.5vw;
+
+  } 
+}
+
+
+
+// .project-not-selected{
+
+// }
+
+// .project-selected{
+//   display: flex !important;
+//   align-items: center;
+// }
+

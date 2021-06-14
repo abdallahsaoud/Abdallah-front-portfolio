@@ -1,0 +1,6 @@
+<section *ngIf='project ' class="project" [ngStyle.gt-md]="{'height': '49vw', 'width':'50vw','padding-top': '20vh'}">
+  <h1 class="project--title" [ngStyle.gt-md]="{'font-size':'56px','line-height':'71px'}">{{project.title}}</h1>
+  <h2 class="project--subtitle" [ngStyle.gt-md]="{'font-size':'32px','line-height':'40px'}">{{project.subTitle}}</h2>
+  <app-dynamic-section-element *ngFor='let section of project.sections' [section]='section'></app-dynamic-section-element>
+</section>
+<button  [fxHide.gt-md]="true" routerLink='/' class='project-button'>Revenir à l'accueil</button>
