@@ -1,6 +1,6 @@
 .section {
   padding-bottom: var(--space-xxxl);
-
+  
   &--title {
     font-family: var(--font-main);
     font-style: normal;
@@ -18,13 +18,16 @@
     font-size: 18px;
     line-height: 140%;
     color: var(--color-secondary);
-  }
+    white-space: pre-line;
+    padding-bottom: var(--space-m);
   
+  }
+ 
   &--stats-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-    padding-top: var(--space-m);
+    // padding-top: var(--space-m);
 
 
     &--item {
@@ -69,6 +72,7 @@
 
     &--text {
       padding: 0 0.5vw 0 0.5vw;
+      text-align: center;
     }
   }
 
@@ -76,6 +80,11 @@
     &--link{
       display: flex;
       align-items: center;
+
+      &:not(:last-child){
+        padding-bottom: 27px;
+      }
+
       &--a{
         font-family: var(--font-main);
         font-style: normal;
@@ -83,7 +92,7 @@
         font-size: 21px;
         line-height: 140%;
         color: var(--color-main);
-        text-decoration: none;
+        text-decoration: none;       
       }
 
       &--icon{

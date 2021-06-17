@@ -3,10 +3,12 @@
   flex-direction: column;
   align-items: center;
   position: relative;
+
+
 }
 
 .card {
-  width: 8vw;
+  width: 9vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,6 +16,15 @@
   border-radius: 2px;
   padding: 2.5559105431309903vh 1.5476190476190477vw 2.5559105431309903vh
     1.5476190476190477vw;
+    transition: box-shadow 0.4s ease-in-out;
+
+    &:hover {
+      // box-shadow: rgba(221, 171, 255, 0.2) 0px 2px 8px 0px;
+      // box-shadow: rgba(238, 184, 255, 0.05) 0px 1px 0px, rgba(226, 164, 255, 0.1) 0px 0px 8px;
+      box-shadow: #8960fc85 0px 3px 8px;
+      
+      transition: box-shadow 0.4s ease-in-out;
+    }
     
   &--number {
     font-family: var(--font-main);

@@ -40,6 +40,7 @@ export class GalleryComponent implements OnInit {
         imageSize: ImageSize.Contain,
         thumbPosition: ThumbnailsPosition.Bottom,
         thumb: true,
+
       });
       // 3. Load the items into the lightbox
       lightboxGalleryRef.load(items);

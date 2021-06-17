@@ -39,7 +39,9 @@ import { GalleryComponent } from './component/gallery/gallery.component';
     BrowserAnimationsModule,
     HttpClientModule,
     GalleryModule,
-    LightboxModule,
+    LightboxModule.withConfig({
+      panelClass: 'fullscreen'
+    }),
     FlexLayoutModule
   ],
   providers: [],

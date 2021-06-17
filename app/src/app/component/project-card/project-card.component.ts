@@ -45,7 +45,7 @@ export class ProjectCardComponent implements OnInit {
   getTransform() {
     if (!this.activeProject) {
       this.transform = {
-        transform: `translateX(calc(350% + 12vw))`,
+        transform: `translateX(calc(350% + 5vw))`,
         transition: "transform 300ms ease",
       };
     } else if (this.index === this.activeProject) {
@@ -68,7 +68,7 @@ export class ProjectCardComponent implements OnInit {
     } else if (this.index > this.activeProject) {
       if (this.index > 2 && this.activeProject === this.index - 1) {
         let transformPosition = 100 * (this.index - 2);
-        let padding = 12 - (1.5 * this.index - 3);
+        let padding = 5 - (1.5 * this.index - 3);
         this.transform = {
           transform: `translateX(calc( (350% - ${transformPosition}%) + ${padding}vw))`,
           transition: "transform 300ms ease",
@@ -79,9 +79,9 @@ export class ProjectCardComponent implements OnInit {
           this.projectNumbers - (this.projectNumbers - this.activeProject);
         let padding;
         if (this.index === 2) {
-          padding = 12;
+          padding = 5;
         } else {
-          padding = 12 - 1.5 * (this.index - 3);
+          padding = 5 - 1.5 * (this.index - 3);
         }
 
         let transformPosition = 100 * (diff - 1);

@@ -1,7 +1,7 @@
 <section [ngClass.gt-md]=" !projectAvailable || !descriptionAvailable ? 'unaivalable' : 'desktop-layout' " class='app-layout' gdColumns.lt-lg="1fr"  gdRows.lt-lg="max-content" [ngStyle.gt-md]="{'padding':'0 100px 0 100px'}" >
-  <app-description-overview (descriptionAvailable)='updateDescAvailability($event)'[@projectSelected]='projectSelected ? "selected" : "not-selected"' 
+  <app-description-overview (descriptionAvailable)='updateDescAvailability($event)' [ngClass.gt-md]="activeProject ? 'desc-selected' : 'desc-not-selected'"  
   [ngStyle.gt-md]="{'position':'absolute','right':'40%'}"></app-description-overview>
-  <app-project [projectId]='activeProject' *ngIf='activeProject' ></app-project>
+  <app-project [projectId]='activeProject' [ngStyle.lt-lg]='{"display": "none"}' *ngIf='activeProject' ></app-project>
   <app-project-section (projectsAvailable)='updateProjectAvailability($event)' (projectChange)='updateView($event)' [ngClass.gt-md]=" activeProject ? 'project-activated' : ''"  ></app-project-section>
 </section>
 

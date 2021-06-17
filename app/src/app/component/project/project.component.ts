@@ -56,9 +56,9 @@ export class ProjectComponent implements OnInit {
       setTimeout(()=>{
         this.transform = {
           'opacity' : '1',
-          'transition' : 'opacity 100ms ease 0s, transform 500ms ease',
-          'transition-delay': '900ms',
-          'transform': 'translateX(17vw)'
+          'transition' : 'opacity 500ms ease 1480ms, transform 500ms ease 1300ms',
+       
+          'transform': 'translateX(24.5vw)'
         }
       },10)
      

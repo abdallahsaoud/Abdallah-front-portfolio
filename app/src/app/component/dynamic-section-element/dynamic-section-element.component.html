@@ -3,7 +3,7 @@
   <h3 class='section--title' *ngIf="section.title" [ngStyle.gt-md]="{'font-size':'24px','line-height': '30px'}">{{section.title}}</h3>
 
   <!--TEXT-->
-  <p class='section--text' *ngIf="section.text" [ngStyle.gt-md]="{'font-size':'18px','line-height': '140%'}">{{section.text}}</p>
+  <div class='section--text' *ngIf="section.text" [ngStyle.gt-md]="{'font-size':'18px','line-height': '140%'}">{{section.text}}</div>
 
   <!--STATS LIST-->
   <ul class='section--stats-list' *ngIf="section.stats">
@@ -46,7 +46,7 @@
       <path d="M11.5443 9.45157C10.7252 8.6328 9.61445 8.17285 8.4563 8.17285C7.29815 8.17285 6.18741 8.6328 5.3683 9.45157L2.2793 12.5396C1.46018 13.3587 1 14.4697 1 15.6281C1 16.7865 1.46018 17.8974 2.2793 18.7166C3.09842 19.5357 4.20939 19.9959 5.3678 19.9959C6.52621 19.9959 7.63718 19.5357 8.4563 18.7166L10.0003 17.1726" stroke="#6C38FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       <path d="M8.45703 12.5397C9.27614 13.3584 10.3869 13.8184 11.545 13.8184C12.7032 13.8184 13.8139 13.3584 14.633 12.5397L17.722 9.45166C18.5412 8.63254 19.0013 7.52157 19.0013 6.36316C19.0013 5.20475 18.5412 4.09378 17.722 3.27466C16.9029 2.45554 15.7919 1.99536 14.6335 1.99536C13.4751 1.99536 12.3642 2.45554 11.545 3.27466L10.001 4.81866" stroke="#6C38FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
-      <a  class='section--links--link--a' href="{{link.link}}">{{link.linkName}}</a>
+      <a  class='section--links--link--a' href="{{link.link}}" target="_blank">{{link.linkName}}</a>
       </li>
   </ul>
 </div>
