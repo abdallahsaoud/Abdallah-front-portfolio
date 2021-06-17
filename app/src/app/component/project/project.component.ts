@@ -58,7 +58,7 @@ export class ProjectComponent implements OnInit {
           'opacity' : '1',
           'transition' : 'opacity 500ms ease 1480ms, transform 500ms ease 1300ms',
        
-          'transform': 'translateX(24.5vw)'
+          'transform': 'translateX(22vw)'
         }
       },10)
      

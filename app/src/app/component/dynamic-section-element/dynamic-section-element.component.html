@@ -17,7 +17,7 @@
   <app-gallery *ngIf="section.gallery" [images]='section.gallery' [index]='section.id'></app-gallery>
 
   <!--SINGLE IMG-->
-  <img class='section--img' *ngIf="section.image" src="{{section.image.url}}" alt="">
+  <img class='section--img' *ngIf="section.image" loading="lazy" src="{{section.image.url}}" alt="">
 
   <!-- CITATION -->
   <span *ngIf="section.citation" class='section--citation'>

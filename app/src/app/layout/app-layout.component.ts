@@ -1,5 +1,6 @@
 import { animate, state, style, transition, trigger } from "@angular/animations";
-import { Component } from "@angular/core";
+import { ViewportScroller } from "@angular/common";
+import { Component, HostListener } from "@angular/core";
 
 
 @Component({
@@ -25,12 +26,19 @@ import { Component } from "@angular/core";
   styleUrls: ["./app-layout.component.scss"],
 })
 export class AppLayoutComponent {
+  pageYoffset: number;
+  @HostListener('window:scroll', ['$event']) onScroll(event){
+    this.pageYoffset = window.pageYOffset;
+  }
+
+
+
 
   projectSelected = false;
   activeProject = '';
   descriptionAvailable;
   projectAvailable;
-  constructor() {}
+  constructor(private scroll: ViewportScroller) { }
 
   ngOnInit(): void {
   
@@ -46,6 +54,8 @@ export class AppLayoutComponent {
     } else {
       this.projectSelected = false;
     }
+    this.scroll.scrollToPosition([0,0]);
+    console.log('test');
     
   }
 
