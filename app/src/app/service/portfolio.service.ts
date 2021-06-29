@@ -15,7 +15,7 @@ export class PortfolioService {
   getDescription(){
     return this.http
     .get<PortfolioDescription>(
-      "https://portfolio-corentin.herokuapp.com/portfolio-descriptions"
+      "https://imed-portfolio-back.herokuapp.com/portfolio-descriptions"
     )
   }
 
@@ -25,7 +25,7 @@ export class PortfolioService {
   getProjects(){
     return this.http
     .get(
-      "https://portfolio-corentin.herokuapp.com/projects"
+      "https://imed-portfolio-back.herokuapp.com/projects"
     )
   }
 
@@ -36,7 +36,7 @@ export class PortfolioService {
   getProjectsById(projectId){
     return this.http
     .get(
-      `https://portfolio-corentin.herokuapp.com/projects/${projectId}`   
+      `https://imed-portfolio-back.herokuapp.com/${projectId}`   
     )
   }
 }
