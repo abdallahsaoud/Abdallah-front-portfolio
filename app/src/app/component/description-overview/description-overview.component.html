@@ -2,8 +2,8 @@
 <section class='description' *ngIf='portfolioDescription' [ngStyle.gt-md]="{'font-size': '60px' ,'line-height': '76px','padding-right': '3vw'}">   
 
   <!-- TITLE-->
-  <div class='description--title' [ngStyle.gt-md]="{'font-size': '60px' ,'line-height': '76px'}">
-    <div>{{portfolioDescription.lastName}}</div>
+  <div class='description--title' [ngStyle.gt-md]="{'font-size': '60px' ,'line-height': '76px','display':'flex'}">
+    <div  [ngStyle.gt-md]="{'padding-right': '20px'}">{{portfolioDescription.lastName}}</div>
     <div>{{portfolioDescription.firstName}}</div>
   </div>
   <!-- SUBTITLE-->
@@ -13,7 +13,11 @@
   <!-- PORTFOLIO CONTACT LIST-->
   <address>
     <ul class='description--contact-list' [ngStyle.gt-md]="{'padding': '0'}">
+      <li class='description--contact-list--item' [ngStyle.gt-md]="{'font-size': '18px' ,'line-height': '23px'}"> <a href="../../../assets/pdf/imed-cv-final.pdf" target="_blank" >CV</a></li>
       <li class='description--contact-list--item' [ngStyle.gt-md]="{'font-size': '18px' ,'line-height': '23px'}" *ngFor="let contact of portfolioDescription.contact"> <a href="{{contact.link}}" target="_blank">{{contact.linkName}}</a></li>
+
+      
+
     </ul>
   </address>
 </section>

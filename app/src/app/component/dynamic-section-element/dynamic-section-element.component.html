@@ -1,6 +1,7 @@
 <div class='section'>
   <!--TITLE-->
   <h3 class='section--title' *ngIf="section.title" [ngStyle.gt-md]="{'font-size':'24px','line-height': '30px'}">{{section.title}}</h3>
+  <h4 class='section--subtitle' *ngIf="section.subtitle" [ngStyle.gt-md]="{'font-size':'20px','line-height': '30px'}">{{section.subtitle}}</h4>
 
   <!--TEXT-->
   <div class='section--text' *ngIf="section.text" [ngStyle.gt-md]="{'font-size':'18px','line-height': '140%'}">{{section.text}}</div>
