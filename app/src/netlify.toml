@@ -1,6 +1,6 @@
 [build]
   publish = "app/dist"
-  command = "ng build --prod --aot=true --buildOptimizer=true"
+  command = "NODE_OPTIONS=--openssl-legacy-provider ng build --prod --aot=true --buildOptimizer=true"
 [[redirects]]
   from = "/*"
   to = "/index.html"
