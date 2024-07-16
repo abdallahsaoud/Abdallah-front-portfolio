@@ -15,7 +15,7 @@ export class PortfolioService {
   getDescription(){
     return this.http
     .get<PortfolioDescription>(
-      "https://imed-portfolio-back.herokuapp.com/portfolio-descriptions"
+      "https://portfolio-abdallah-saoud-680b87858be7.herokuapp.com/api/portfolio-descriptions"
     )
   }
 
@@ -25,7 +25,7 @@ export class PortfolioService {
   getProjects(){
     return this.http
     .get(
-      "https://imed-portfolio-back.herokuapp.com/projects"
+      "https://portfolio-abdallah-saoud-680b87858be7.herokuapp.com/api/projects"
     )
   }
 
@@ -36,7 +36,7 @@ export class PortfolioService {
   getProjectsById(projectId){
     return this.http
     .get(
-      `https://imed-portfolio-back.herokuapp.com/${projectId}`   
+      `https://portfolio-abdallah-saoud-680b87858be7.herokuapp.com/api/projects/${projectId}`   
     )
   }
 }
