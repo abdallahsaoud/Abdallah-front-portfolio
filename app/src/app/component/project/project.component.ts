@@ -1,6 +1,6 @@
-import { animate, state, style, transition, trigger } from "@angular/animations";
-import { Component, HostBinding, Input, OnInit, SimpleChanges } from "@angular/core";
+import { Component, OnInit, Input, HostBinding, SimpleChanges } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
+import { PortfolioService } from '../../service/portfolio.service';
 
 @Component({
   selector: "app-project",
@@ -8,68 +8,45 @@ import { ActivatedRoute } from "@angular/router";
   styleUrls: ["./project.component.scss"],
 })
 export class ProjectComponent implements OnInit {
-  projects; // TODO PROJECT INTERFACE ARRAY
-  project; // TODO PROJECT INTERFACE
-  windowWith;
-  @Input() projectId;
-  @HostBinding('style') transform: {};
-  constructor(private route: ActivatedRoute) {}
+  projects: any[];
+  project: any;
+  windowWith: number;
+  @Input() projectId: string;
+  @HostBinding('style') transform: any;
+
+  constructor(private route: ActivatedRoute, private portfolioService: PortfolioService) {}
 
   ngOnInit(): void {
     if(!this.projectId){
       this.route.params.subscribe(params => {
         this.projectId = params['id']; 
-        console.log(this.projectId);
-        let projects = JSON.parse(localStorage.getItem("projects"));
-        this.project = this.getProject(projects,this.projectId);
+        this.loadProject();
       });
     } else {
-      let projects = JSON.parse(localStorage.getItem("projects"));
-      this.project = this.getProject(projects,this.projectId);
+      this.loadProject();
     }
   }
 
-  getProject(projects, projectId) {
-    let project;
-    projects.forEach(element => {
-      if(element.id === projectId) {
-        project =  element
-      } else {
-        console.log('project not found');
-        return 'not found' 
-      }
+  loadProject() {
+    this.portfolioService.getProjectsById(this.projectId).subscribe(project => {
+      this.project = project;
     });
-    return project
   }
-
 
   ngOnChanges(changes: SimpleChanges) {
-    let projects = JSON.parse(localStorage.getItem("projects"));
-    this.transform = {
-      'opacity' : '0',
-      'transform': 'translateX(100vw)'
-    }
     if(changes.projectId){
-      console.log('change');
-      this.project = this.getProject(projects,changes.projectId.currentValue)
-     
+      this.loadProject();
+      this.transform = {
+        'opacity' : '0',
+        'transform': 'translateX(100vw)'
+      }
       setTimeout(()=>{
         this.transform = {
           'opacity' : '1',
           'transition' : 'opacity 500ms ease 1480ms, transform 500ms ease 1300ms',
-       
           'transform': 'translateX(22vw)'
         }
-      },10)
-     
-   
+      }, 10);
     }
-
-    
-  
-  }
-
-  onAnimationEvent( event ) {
-  
   }
 }
